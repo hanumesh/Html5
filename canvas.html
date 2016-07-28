@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>canvas</title>
+		<meta name="description" content="">
+		<meta name="author" content="User">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<style>
+			canvas {
+				border: 1px solid red;
+			}
+		</style>
+		<script>
+var d =[
+{ "bx":30,"by":300,"bw":100 ,"bh":300},
+{ "bx":250,"by":350,"bw":100 ,"bh":350},
+{ "bx":300,"by":400,"bw":100 ,"bh":250},
+{ "bx":470,"by":450,"bw":100 ,"bh":150},
+{ "bx":550,"by":300,"bw":100 ,"bh":300}
+]
+window.onload = function(){
+var x = document.getElementById("can").getContext("2d");
+/*
+x.font ="bold 100px arial";
+x.strokestyle = "orange";
+x.lineWidth = 15;
+x.strokeText("Synechron ",0,100,600);
+x.fillText("Synechron ",0,100,600);*/
+//x.fillRect(50,50,100,100);
+/*
+x.beginPath();
+x.fillStyle = "orange";
+x.strokeStyle = "blue"
+x.lineWidth = 10;
+x.arc(200,150,100,(Math.PI/180)*0,(Math.PI/180)*360,true);
+x.closePath();
+x.fill();
+x.stroke();*/
+
+/*
+x.fillStyle = "purple"
+x.beginPath();
+x.moveTo(100,100);
+x.lineTo(100,200);
+x.lineTo(200,200);
+x.lineTo(200,100);
+x.lineTo(100,100)
+x.closePath();
+x.fill();			*/
+
+
+/*
+x.fillRect(130,100,100,300)
+x.fillRect(200,150,100,300)
+x.fillRect(250,300,100,300)
+x.fillRect(300,300,150,300)
+x.fillRect(350,300,100,300)
+x.fillRect(390,300,100,300)
+x.fillRect(400,300,100,300)
+*/
+
+
+for (var i=0; i<d.length; i+=10){
+	x.fillRect(d[i].bx ,d[i].by, d[i].bw, d[i].bh);	
+	}	
+}
+
+		</script>
+	</head>
+
+	<body>
+		<canvas width="600" height="600" id="can"></canvas>
+	</body>
+</html>

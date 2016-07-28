@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Validation</title>
+    <script>
+    window.onload = init;
+    
+    function init(){
+        /*
+        document.getElementById("un").setCustomValidity("my custom validation message")
+         */
+        document.getElementById("un").addEventListener("input", usernameFun);
+        document.getElementById("ua").addEventListener("input", ageFun);
+    }
+    
+    function usernameFun(){
+            if(document.getElementById("un").value.length > 1){
+                document.getElementById("un").setCustomValidity("");
+            }else{
+                document.getElementById("un").setCustomValidity("please enter your name")
+            }
+    }
+    function ageFun(){
+            if(document.getElementById("ua").value < 18){
+                document.getElementById("ua").setCustomValidity("you are too young")
+            }else if(document.getElementById("ua").value > 80){
+                document.getElementById("ua").setCustomValidity("you are too old to join us")
+            }else{
+                document.getElementById("ua").setCustomValidity("");
+            }
+    }
+    </script>
+</head>
+<body>
+    <form action="#" method="get">
+        <table border="0" cellspacing="5" cellpadding="5">
+        <tr>
+            <td>User Name : </td>
+            <td>
+                <input id="un" required name="username" type="text" placeholder="Your Emp ID" />
+            </td>
+        </tr>
+        <tr>
+            <td>User Age : </td>
+            <td>
+                <input id="ua" required name="userage" type="number" placeholder="Your Age" />
+            </td>
+        </tr>
+        <tr>
+            <td>User Phone : </td>
+            <td>
+                <input id="up" pattern="\d{3}-\d{4}-\d{4}" title="user the follwing pattern : ###-####-####" required name="userphone" type="text" placeholder="Local Phone Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <input type="submit" value="Submit"/>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
