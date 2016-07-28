@@ -1,0 +1,6 @@
+* style tag should be in head section
+http://htmlcolorcodes.com/
+
+* IE 
+https://github.com/aFarkas/html5shiv
+
