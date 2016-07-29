@@ -8,7 +8,7 @@
         <script>
                 var worker = null;
                 window.onload = function(){
-                        worker = new Worker("workers/worker2.js");
+                        worker = new Worker("worker2.js");
                         worker.addEventListener("message", messageHandler);
                         document.getElementById("btn").addEventListener("click", clickHandler)
                         document.getElementById("stopbtn").addEventListener("click", stopHandler)
