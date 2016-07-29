@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" manifest="app.manifest">
+	
+<head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <script>
+                window.onload = function(){
+                        setInterval(function(){
+                                if(navigator.onLine){
+                                        document.getElementById("log").innerHTML = "ONLINE";
+                                        document.getElementById("log").setAttribute("style","color : green");
+                                }else{
+                                        document.getElementById("log").innerHTML = "OFFLINE";
+                                        document.getElementById("log").setAttribute("style","color : red");
+                                }
+                        },1000)
+                }
+        </script>
+</head>
+<body>
+        <h1>You are <span id="log"></span></h1>
+        <hr/>
+        <img src="images/1.jpg" width="500" / >
+        <img src="images/2.jpg" width="500" / >
+        <img src="images/3.jpg" width="500" / >
+        
+</body>
+</html>

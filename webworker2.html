@@ -1,0 +1,34 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <script src="worker2.js"></script>
+        <script>
+                var worker = null;
+                window.onload = function(){
+                        worker = new Worker("workers/worker2.js");
+                        worker.addEventListener("message", messageHandler);
+                        document.getElementById("btn").addEventListener("click", clickHandler)
+                        document.getElementById("stopbtn").addEventListener("click", stopHandler)
+                }
+                function messageHandler(event){
+                        document.getElementById("log").innerHTML = event.data;
+                }
+                function clickHandler(){
+                        var val = document.getElementById("ti1").value;
+                        worker.postMessage(val);
+                }
+                function stopHandler(){
+                        worker.terminate();
+                }
+        </script>
+</head>
+<body>
+        <input id="ti1" />
+        <button id="btn">Send Number</button>
+        <h1> Count now is : <span id="log"></span></h1>
+        <button id="stopbtn">Stop Worker</button>
+</body>
+</html>

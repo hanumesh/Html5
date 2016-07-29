@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <script src ="worker1.js"></script>
+        <script>
+                window.onload = function(){
+                        var worker = new Worker("workers/worker1.js");
+                        worker.addEventListener("message", messageHandler)
+                }
+                function messageHandler(event){
+                        document.getElementById("log").innerHTML = event.data;
+                }
+        </script>
+</head>
+<body>
+        <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+        </ul>
+        <hr/>
+        <h1> Count now is : <span id="log"></span></h1>
+</body>
+</html>
