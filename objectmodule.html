@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Browser Object Module Feature - Geolocation</title>
+		<script>
+			var zoom = 0;
+			var pos = null;
+			window.onload = function() {
+				navigator.geolocation.getCurrentPosition(success, error);
+			};
+			function success(position) {
+				pos = position;
+				zoom = document.getElementById("zoom").value;
+				mapfun();
+			}
+
+			function error(error) {
+				alert(error.message)
+			}
+
+			var config = { };
+			function mapfun() {
+				var lat = pos.coords.latitude;
+				var lon = pos.coords.longitude;
+				zoom = document.getElementById("zoom").value;
+				// alert("Longitude : "++"\nLatitude : "+);
+				document.getElementById("map").src = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&markers=color:orange|label:V|" + lat + "," + lon + "&zoom=" + zoom + "&size=600x600";
+			}
+		</script>
+	</head>
+	<body>
+		<input id="zoom" onchange="mapfun()" value="10" type="range" min="1" max="30" step="1" />
+		<hr/>
+		<img id="map" />
+	</body>
+</html>

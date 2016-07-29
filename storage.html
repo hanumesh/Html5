@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Storage API</title>
+    <script>
+onload = function(){
+    document.getElementById("btn").addEventListener("click", clickHandler);
+    document.getElementById("getBtn").addEventListener("click", getHandler);
+    document.getElementById("lengthBtn").addEventListener("click", lengthHandler);
+    document.getElementById("removePowerBtn").addEventListener("click", removePowerHandler);
+    document.getElementById("readPowerBtn").addEventListener("click", readPowerHandler);
+    document.getElementById("removeAllBtn").addEventListener("click", clearHandler);
+    document.getElementById("readKeyBtn").addEventListener("click", readHandler);
+};
+/*
+ * length
+ * getItem
+ * setItem
+ * removeItem
+ * key
+ * clear
+ */
+function clickHandler(){
+    localStorage.setItem("userName",document.getElementById("un").value) ;
+    localStorage.setItem("userPower",document.getElementById("up").value);
+    document.getElementById("un").value = document.getElementById("up").value = "";
+};
+function getHandler(){
+    alert(localStorage.getItem("userName")+" | "+localStorage.getItem("userPower"));
+};
+function lengthHandler(){
+    alert(localStorage.length);
+};
+function removePowerHandler(){
+    localStorage.removeItem("userPower")
+    alert("user power is now removed");
+};
+function readPowerHandler(){
+    alert(localStorage.getItem("userPower"));
+};
+function clearHandler(){
+    localStorage.clear()
+    alert("local storage is now clear");
+};
+function readHandler(){
+    alert(localStorage.key(0));
+};
+    </script>
+</head>
+<body>
+    <table border="0" cellspacing="5" cellpadding="5">
+        <tr>
+            <th>User Name : </th>
+            <td><input type="text" id="un" /></td>
+        </tr>
+        <tr>
+            <th>User Power : </th>
+            <td><input type="text" id="up" /></td>
+        </tr>
+        <tr>
+            <th> </th>
+            <td>
+                <button id="btn">Add Info</button>
+            </td>
+        </tr>
+    </table>
+    <hr/>
+    <button id="getBtn">Get User Data</button>
+    <button id="lengthBtn">Get User Data Length</button>
+    <button id="removePowerBtn">Remove Power</button>
+    <button id="readPowerBtn">Read Power</button>
+    <button id="readKeyBtn">Read First Key Name</button>
+    <button id="removeAllBtn">Remove All</button>
+</body>
+</html>

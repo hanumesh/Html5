@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Browser Object Module Feature - Geolocation</title>
+		<script>
+			var zoom = 0;
+			var pos = null;
+			window.onload = function() {
+				// navigator.geolocation.getCurrentPosition(success,error,config);
+				navigator.geolocation.watchPosition(success, error, config);
+			}
+			function success(position) {
+				pos = position;
+				mapfun();
+			}
+
+			function error(error) {
+				alert(error.message)
+			}
+
+			var config = {
+				enableHighAccuracy : true,
+				timeout : 5000,
+				maximumAge : 5000
+			};
+			function mapfun() {
+				/*
+
+				 *
+				 * pos
+				 *         timestamp
+				 *         coords
+				 *                 longitude
+				 *                 latitude
+				 *                 accuracy
+				 *                 speed // not supported yet
+				 *                 heading // not supported yet
+				 *                 altitude // not supported yet
+				 *                 altitudeAccuracy // not supported yet
+				 */
+				var lat = pos.coords.latitude;
+				var lon = pos.coords.longitude;
+				zoom = document.getElementById("zoom").value;
+				document.getElementById("acc").innerHTML = pos.coords.accuracy + " meters away...ie., " + pos.coords.accuracy / 1000 + " kms away";
+				// alert("Longitude : "++"\nLatitude : "+);
+				document.getElementById("map").src = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&markers=color:orange|label:V|" + lat + "," + lon + "&zoom=" + zoom + "&size=600x600";
+			}
+		</script>
+	</head>
+	<body>
+		<input id="zoom" onchange="mapfun()" value="10" type="range" min="1" max="30" step="1" />
+		<h1>accuracy : <span id="acc"></span></h1>
+		<hr/>
+		<img id="map" />
+	</body>
+</html>
