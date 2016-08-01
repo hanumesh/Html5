@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style>
+			/*
+			 li:first-child{
+			 background-color: yellow
+			 }
+			 li:last-child{
+			 background-color: gray
+			 }
+			 ul:first-child li:first-child{
+			 background-color: red
+			 }
+
+			 li:nth-child(2n+5){
+			 background-color: red
+			 } 
+			 
+			 */
+			
+			
+		li:nth-child(2n+2){
+			 background-color: red
+		</style>
+	</head>
+	<!-- Sibling share same hierarchy, child inherent from parent-->
+	<body>
+		<ul>
+			<li>
+				List Item 1
+			</li>
+			<li>
+				List Item 2
+			</li>
+			<li>
+				List Item 3
+			</li>
+			<li>
+				List Item 4
+			</li>
+			<li>
+				List Item 5
+			</li>
+			<li>
+				List Item 6
+			</li>
+			<li>
+				List Item 7
+			</li>
+			<li>
+				List Item 8
+			</li>
+			<li>
+				List Item 9
+			</li>
+			<li>
+				List Item 10
+			</li>
+		</ul>
+		<ul>
+			<li>
+				List Item 1
+			</li>
+			<li>
+				List Item 2
+			</li>
+			<li>
+				List Item 3
+			</li>
+			<li>
+				List Item 4
+			</li>
+			<li>
+				List Item 5
+			</li>
+			<li>
+				List Item 6
+			</li>
+			<li>
+				List Item 7
+			</li>
+			<li>
+				List Item 8
+			</li>
+			<li>
+				List Item 9
+			</li>
+			<li>
+				List Item 10
+			</li>
+		</ul>
+		<ul>
+			<li>
+				List Item 1
+			</li>
+			<li>
+				List Item 2
+			</li>
+			<li>
+				List Item 3
+			</li>
+			<li>
+				List Item 4
+			</li>
+			<li>
+				List Item 5
+			</li>
+			<li>
+				List Item 6
+			</li>
+			<li>
+				List Item 7
+			</li>
+			<li>
+				List Item 8
+			</li>
+			<li>
+				List Item 9
+			</li>
+			<li>
+				List Item 10
+			</li>
+		</ul>
+	</body>
+</html><!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style>
+			/*
+			 * ^ value that begins with
+			 * $ value that ends with
+			 * * value that contains with
+			 * | value that has a suffix of - or must contain exact word
+			 * ~ value that has a prefix of space
+			 div[class ~="tom"]{
+			 border: 5px dotted red;
+			 }
+			 */
+			div[class |="tom"] {
+				border: 5px dotted red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="supergirl">
+			<h1>Supergirl</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="batman">
+			<h1>Batman</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="superman">
+			<h1>Superman</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="ironman">
+			<h1>Ironman</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="spiderman">
+			<h1>Spiderman</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="phantom">
+			<h1>Phantom</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="tom">
+			<h1>tom</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="tom-my">
+			<h1>Phan-tom</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="phan tom">
+			<h1>Phan tom</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="tommy">
+			<h1>Tommy</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+	</body>
+</html>
+

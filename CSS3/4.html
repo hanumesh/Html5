@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <title>Nth More</title>
+        <style>
+        /*
+         * num
+         * 2n
+         * odd/even
+         * 2n+
+         * 2n-
+                p:nth-of-type(2n){
+                        border: 2px solid red;
+                }
+                p:nth-last-of-type(2){
+                        border: 2px solid red;
+                }
+                p:first-of-type{
+                        border : 2px solid red;
+                }
+                p:last-of-type{
+                        border : 2px solid red;
+                }
+                p:only-of-type{
+                        
+                }
+                p:only-child{
+                        border : 2px solid red;
+                }
+                p:only-of-type{
+                        border : 2px solid red;                        
+                }
+        body{
+                background-color: #3399FF;
+        }
+        p::selection{
+                background-color: pink;
+                color: yellow;
+        }
+        p:empty{
+                border: 10px solid gray;
+        }
+        input[type="checkbox"]:checked{
+                
+        }
+         */
+        ul li:not(.box){
+                border: 2px solid red;
+        }
+        </style>
+</head>
+<body>
+        <input type="checkbox" name="some_name" value="" id="some_name"/>
+        <input type="checkbox"  name="some_name" value="" id="some_name"/>
+        <input type="checkbox"  name="some_name" value="" id="some_name"/>
+        <input type="checkbox"  name="some_name" value="" id="some_name"/>
+        <input type="checkbox"  name="some_name" value="" id="some_name"/>
+        <input type="checkbox"  name="some_name" value="" id="some_name"/>
+        <p>Paragraph outer</p>
+        <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <p>Paragraph 1</p>
+                <li class="box">List Item 3</li>
+                <li class="box">List Item 3 A</li>
+                <li>List Item 4</li>
+                <p>Paragraph 2</p>
+                <li>List Item 5</li>
+                <li>List Item 6</li>
+                <p>Paragraph 3</p>
+                <li>List Item 7</li>
+                <li>List Item 8</li>
+                <p>Paragraph 4</p>
+                <li>List Item 9</li>
+                <li>List Item 10</li>
+        </ul>
+        <hr/>
+        <p> </p>
+        <hr/>
+        <p></p>
+        <hr/>
+        <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+</body>
+</html>
